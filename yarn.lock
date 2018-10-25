@@ -746,10 +746,10 @@
     "@babel/runtime" "7.0.0"
     recompose "^0.29.0"
 
-"@pxblue/icons-svg@^1.0.0":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@pxblue/icons-svg/-/icons-svg-1.0.2.tgz#f04ec9d192f565a835e928f6e3903fecfa60ae3b"
-  integrity sha512-8lud9j16P1stSHTyDd8Vb7LQ6LIJH7QbFJP2DE0iysvHsQD9ZX4hkVmKrUOtqyLCzTaaVPE6BfIL2cPuPiineg==
+"@pxblue/symbols@^1.0.0":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@pxblue/symbols/-/symbols-1.0.3.tgz#e63e9804c7a653dc087b2bdb227d2d21768df112"
+  integrity sha512-5zpp3B1bEMMNT5pVTFRFD5m+/L6Zb0a0RVUySVMVEYofiOBAvSGlxNlxMY+aD17I/pogEyY9laEPJb9y3Qga4w==
 
 "@types/jss@^9.5.6":
   version "9.5.7"
@@ -2554,9 +2554,9 @@ trim-right@^1.0.1:
   integrity sha1-yy4SAwZ+DI3h9hQJS5/kVwTqYAM=
 
 ua-parser-js@^0.7.18:
-  version "0.7.18"
-  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.18.tgz#a7bfd92f56edfb117083b69e31d2aa8882d4b1ed"
-  integrity sha512-LtzwHlVHwFGTptfNSgezHp7WUlwiqb0gA9AALRbKaERfxwJoiX0A73QbTToxteIAuIaFshhgIZfqK8s7clqgnA==
+  version "0.7.19"
+  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.19.tgz#94151be4c0a7fb1d001af7022fdaca4642659e4b"
+  integrity sha512-T3PVJ6uz8i0HzPxOF9SWzWAlfN/DavlpQqepn22xgve/5QecC+XMCAtmUNnY7C9StehaV6exjUCI801lOI7QlQ==
 
 unicode-canonical-property-names-ecmascript@^1.0.4:
   version "1.0.4"

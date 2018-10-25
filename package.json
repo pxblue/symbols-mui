@@ -16,7 +16,6 @@
   },
   "scripts": {
     "babelfy": "babel symbols --presets=@babel/preset-react,@babel/preset-env --out-dir symbols",
-    "reset": "rm -rf node_modules && rm -f yarn.lock && yarn && cd mui-icon-builder && rm -rf node_modules && rm -f yarn.lock && yarn && cd ..",
     "refresh": "yarn upgrade && cd mui-icon-builder && yarn upgrade && cd ..",
     "clear": "rm -rf symbols",
     "mui": "cd mui-icon-builder && babel-node --config-file ./babel.config.js builder.js --output-dir ../symbols --svg-dir ../node_modules/@pxblue/symbols && cd .. && yarn babelfy",
