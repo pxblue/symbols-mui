@@ -1,0 +1,43 @@
+{
+  "name": "@pxblue/symbols-mui",
+  "version": "1.0.0",
+  "description": "PX Blue symbols for Material UI",
+  "main": "./symbols/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pxblue/symbols-mui.git"
+  },
+  "author": "px-blue <pxblue@eaton.com>",
+  "license": "BSD-3-Clause",
+  "dependencies": {
+    "@material-ui/core": "^3.3.1",
+    "@material-ui/icons": "^3.0.1",
+    "@pxblue/symbols": "^1.0.0"
+  },
+  "scripts": {
+    "babelfy": "babel symbols --presets=@babel/preset-react,@babel/preset-env --out-dir symbols",
+    "reset": "rm -rf node_modules && rm -f yarn.lock && yarn && cd mui-icon-builder && rm -rf node_modules && rm -f yarn.lock && yarn && cd ..",
+    "refresh": "yarn upgrade && cd mui-icon-builder && yarn upgrade && cd ..",
+    "clear": "rm -rf symbols",
+    "mui": "cd mui-icon-builder && babel-node --config-file ./babel.config.js builder.js --output-dir ../symbols --svg-dir ../node_modules/@pxblue/symbols && cd .. && yarn babelfy",
+    "svgr": "npx @svgr/cli -d symbols node_modules/@pxblue/symbols --template mui-template.js --expand-props none --no-dimensions && yarn babelfy",
+    "publish:full": "yarn clear && yarn refresh && yarn mui && npm version patch && npm publish"
+  },
+  "bugs": {
+    "url": "https://github.com/pxblue/symbols-mui/issues"
+  },
+  "homepage": "https://github.com/pxblue/symbols-mui#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/node": "7.0.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0"
+  },
+  "keywords": [
+    "symbols",
+    "material",
+    "material-ui",
+    "pxblue"
+  ]
+}
