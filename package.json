@@ -1,6 +1,6 @@
 {
   "name": "@pxblue/symbols-mui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "PX Blue symbols for Material UI",
   "main": "./symbols/index.js",
   "repository": {
