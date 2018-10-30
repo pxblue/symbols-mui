@@ -1,6 +1,6 @@
 {
   "name": "@pxblue/symbols-mui",
-  "version": "1.0.1",
+  "version": "1.0.2-alpha.1",
   "description": "PX Blue symbols for Material UI",
   "main": "./symbols/index.js",
   "repository": {
@@ -9,10 +9,9 @@
   },
   "author": "px-blue <pxblue@eaton.com>",
   "license": "BSD-3-Clause",
-  "dependencies": {
+  "peerDependencies": {
     "@material-ui/core": "^3.3.1",
-    "@material-ui/icons": "^3.0.1",
-    "@pxblue/symbols": "^1.0.0"
+    "@material-ui/icons": "^3.0.1"
   },
   "scripts": {
     "babelfy": "babel symbols --presets=@babel/preset-react,@babel/preset-env --out-dir symbols",
@@ -31,7 +30,8 @@
     "@babel/core": "^7.1.2",
     "@babel/node": "7.0.0",
     "@babel/preset-env": "^7.1.0",
-    "@babel/preset-react": "^7.0.0"
+    "@babel/preset-react": "^7.0.0",
+    "@pxblue/symbols": "^1.0.0"
   },
   "keywords": [
     "symbols",
