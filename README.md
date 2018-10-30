@@ -9,6 +9,9 @@ or
 yarn add @pxblue/symbols-mui
 ```
 
+>**NOTE (Peer Dependencies):** Using this package requires you to have @material-ui/core and @material-ui/icons defined as dependencies in your project's package.json file.
+
+
 ## Usage
 
 ### Angular
