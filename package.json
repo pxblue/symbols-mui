@@ -17,8 +17,9 @@
     "babelfy": "babel symbols --presets=@babel/preset-react,@babel/preset-env --out-dir symbols",
     "refresh": "yarn upgrade && cd mui-icon-builder && yarn upgrade && cd ..",
     "clear": "rm -rf symbols",
-    "mui": "cd mui-icon-builder && babel-node --config-file ./babel.config.js builder.js --output-dir ../symbols --svg-dir ../node_modules/@pxblue/symbols && cd .. && yarn babelfy",
-    "svgr": "npx @svgr/cli -d symbols node_modules/@pxblue/symbols --template mui-template.js --expand-props none --no-dimensions && yarn babelfy",
+    "remove:sprite": "rm -f node_modules/@pxblue/symbols/symbols.svg",
+    "mui": "yarn remove:sprite && cd mui-icon-builder && babel-node --config-file ./babel.config.js builder.js --output-dir ../symbols --svg-dir ../node_modules/@pxblue/symbols && cd .. && yarn babelfy",
+    "svgr": "yarn remove:sprite && npx @svgr/cli -d symbols node_modules/@pxblue/symbols --template mui-template.js --expand-props none --no-dimensions && yarn babelfy",
     "publish:full": "yarn clear && yarn refresh && yarn mui && npm version patch && npm publish"
   },
   "bugs": {
