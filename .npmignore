@@ -6,6 +6,7 @@
 **/**/yarn.lock
 
 # production
+/.github
 /build
 
 # src folders
