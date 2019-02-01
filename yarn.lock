@@ -693,9 +693,9 @@
     to-fast-properties "^2.0.0"
 
 "@pxblue/symbols@^1.0.0":
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/@pxblue/symbols/-/symbols-1.0.5.tgz#11743c8272545d690421a91a15f4af653aa0cbeb"
-  integrity sha512-5SjESP1uqPJKlKDPlIKjSt7MFRgXIBGhnfP1gXpYPBhi0GD1H58DCwcAN+yQLp0AoPanc7NKvzjglUbL5T9YWg==
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@pxblue/symbols/-/symbols-1.0.6.tgz#463320a9836ee3bb57df3632a994d55af67da503"
+  integrity sha512-dXg71eq4LhsXP764vbbh/KI6vB79aDV9Bc8U1+vZUWpD6JL1Qti0G5h9XwAwmnhUNo51i6Kdr0eTp/I6g4P1xw==
 
 abbrev@1:
   version "1.1.1"
