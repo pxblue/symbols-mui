@@ -30,7 +30,7 @@ If you are importing multiple symbols, you can save some space by using named im
 import {FirstSymbol, SecondSymbol, ThirdSymbol} from '@pxblue/symbols-mui';
 ```
 
-Symbol names are in TitleCase - for a list of available symbols, refer to [@pxblue/symbols](https://github.com/pxblue/symbols/blob/master/README.md) or look at our live [demo](http://www.stackblitz.com/px-blue/pxb-symbols-react).
+Symbol names are in TitleCase - for a list of available symbols, refer to [@pxblue/symbols](https://github.com/pxblue/symbols/blob/master/README.md) or look at our live [demo](http://pxblue.github.io/style/iconography).
 
 ## Building Symbol Set (for contributors)
 To build the symbols set, e.g. when new symbols are added:
