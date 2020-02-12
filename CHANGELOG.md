@@ -1,3 +1,3 @@
 # Recent Changes
-## v2.0.0
+## v1.1.0
 - Added type definitions for use in TypeScript projects
