@@ -2,19 +2,16 @@ version: 2
 jobs:
   build:
     docker: 
-      - image: circleci/node:8.11-browsers
+      - image: circleci/node:12.6-browsers
     steps:
       - checkout
       - run: 
           name: Install Dependencies
           command: |
-            yarn
-            cd mui-icon-builder && yarn && cd ..
-            yarn clear
-            yarn refresh
+            yarn install:dependencies
       - run:
           name: Build MUI
-          command: yarn mui
+          command: yarn build
       - run:
           name: Verify MUI Artifacts
           command: yarn test

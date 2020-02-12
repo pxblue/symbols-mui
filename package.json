@@ -1,6 +1,6 @@
 {
   "name": "@pxblue/symbols-mui",
-  "version": "1.0.4",
+  "version": "2.0.0",
   "description": "PX Blue symbols for Material UI",
   "main": "./symbols/index.js",
   "repository": {
@@ -14,13 +14,13 @@
     "@material-ui/icons": "^3.0.1"
   },
   "scripts": {
-    "test": "./buildTest.sh",
-    "babelfy": "babel symbols --presets=@babel/preset-react,@babel/preset-env --out-dir symbols",
-    "refresh": "yarn upgrade @pxblue/symbols",
-    "clear": "rm -rf symbols",
-    "remove:sprite": "rm -f node_modules/@pxblue/symbols/symbols.svg",
-    "mui": "yarn remove:sprite && cd mui-icon-builder && babel-node --config-file ./babel.config.js builder.js --output-dir ../symbols --svg-dir ../node_modules/@pxblue/symbols && cd .. && yarn babelfy",
-    "publish:full": "yarn clear && yarn refresh && yarn mui && npm version patch && npm publish"
+    "build": "bash ./scripts/generateSymbols.sh",
+    "link:components": "bash ./scripts/linkComponents.sh",
+    "install:dependencies": "yarn && cd scripts/mui-icon-builder && yarn && cd ../.. && cd demos/showcase && yarn && cd ..",
+    "start:showcase": "yarn install:dependencies && yarn build && yarn link:components && cd demos/showcase && yarn start",
+    "start:storybook": "echo 'No storybook demo yet'",
+    "start": "yarn start:showcase",
+    "test": "./scripts/buildTest.sh"
   },
   "bugs": {
     "url": "https://github.com/pxblue/symbols-mui/issues"
