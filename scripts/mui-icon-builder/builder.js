@@ -161,7 +161,10 @@ async function worker({ svgPath, options, renameFilter, template }) {
     .replace(/stroke-linejoin=/g, 'strokeLinejoin=')
     .replace(/clip-path=/g, 'clipPath=')
 
-    .replace(/fill-rule=/g, 'fillRule=');
+    .replace(/fill-rule=/g, 'fillRule=')
+
+    // Update any other properties
+    .replace(/stroke="#000"/g, 'stroke="currentColor"');
     //.replace(/ clip-path=".+?"/g, '') // Fix visibility issue and save some bytes.
     //.replace(/<clipPath.+?<\/clipPath>/g, ''); // Remove unused definitions
 
