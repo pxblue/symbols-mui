@@ -7,8 +7,7 @@
 ## v1.1.0
 
 ### Added
-- Added type definitions for use in TypeScript projects
-
+- Added type definitions for use in TypeScript projects.
 
 ## v1.0.0
 
