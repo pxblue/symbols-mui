@@ -1,8 +1,8 @@
 version: 2
 jobs:
   build:
-    docker: 
-      - image: circleci/node:12.6-browsers
+    docker:
+      - image: circleci/node:12.9.1-browsers
     steps:
       - checkout
       - run: 
@@ -15,3 +15,42 @@ jobs:
       - run:
           name: Verify MUI Artifacts
           command: yarn test
+      - persist_to_workspace:
+          root: .
+          paths:
+            - symbols
+
+  publish:
+    docker:
+      - image: circleci/node:12.9.1-browsers
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
+      - run:
+          name: Authenticate with registry
+          command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
+      - run:
+          name: Publish @pxblue/symbols-mui
+          command:  |
+            MASTER_VERSION=`node -p "require('./package.json').version"`
+            NPM_LATEST_VERSION=`npm show @pxblue/symbols-mui version`
+            if ! [ $MASTER_VERSION == $NPM_LATEST_VERSION ];
+            then
+                npm publish
+            else
+                echo "Latest version is already published."
+            fi
+
+workflows:
+  version: 2
+  symbols-mui:
+    jobs:
+      - build
+      - publish:
+          requires:
+            - build
+          filters:
+            branches:
+              only:
+                - master
