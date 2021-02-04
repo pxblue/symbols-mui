@@ -748,7 +748,7 @@
 
 "@pxblue/symbols@^1.0.0":
   version "1.0.7"
-  resolved "https://registry.yarnpkg.com/@pxblue/symbols/-/symbols-1.0.7.tgz#ca8f3d5dc5d22fed6771870e0130e459f6000c36"
+  resolved "https://registry.npmjs.org/@pxblue/symbols/-/symbols-1.0.7.tgz#ca8f3d5dc5d22fed6771870e0130e459f6000c36"
   integrity sha512-XyhmjWlEYoZHBKiocIX+Ers8aZR5CIRectsiPW8luXcWpZAvhGa4zIbt83JNFHnYlo9qWzOt4m7fDV5Fzps25w==
 
 abbrev@1:

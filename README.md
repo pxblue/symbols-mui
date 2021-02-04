@@ -1,3 +1,6 @@
+[![](https://img.shields.io/circleci/project/github/pxblue/symbols-mui/master.svg?style=flat)](https://circleci.com/gh/pxblue/symbols-mui/tree/master)
+![npm](https://img.shields.io/npm/v/@pxblue/symbols-mui?label=%40pxblue/symbols-mui)
+
 # PX Blue Symbols for Material-UI
 This library contains componentized svg symbols from [@pxblue/symbols](https://github.com/pxblue/symbols) for use in React applications using Material UI. The symbols are made available in the same way that Material UI exposes the [Material Icons](https://material-ui.com/style/icons/#svg-material-icons). 
 
