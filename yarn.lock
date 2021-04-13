@@ -921,6 +921,11 @@
     readdirp "^2.2.1"
     upath "^1.1.1"
 
+"@pxblue/prettier-config@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@pxblue/prettier-config/-/prettier-config-1.0.2.tgz#fb00503df6557b66c3d91d43c9101e614c35d2ec"
+  integrity sha512-/3cLBoTjZs3kV1ATPA/Sp0tsL7XmlV/b8HW/qt0jqR/uP5+cdXL2YIhMXQngLRa7PhpSkEiRIYK5sl0rKsXTUg==
+
 "@pxblue/symbols@^1.0.0":
   version "1.0.7"
   resolved "https://registry.npmjs.org/@pxblue/symbols/-/symbols-1.0.7.tgz#ca8f3d5dc5d22fed6771870e0130e459f6000c36"
@@ -1949,6 +1954,11 @@ posix-character-classes@^0.1.0:
   version "0.1.1"
   resolved "https://registry.npmjs.org/posix-character-classes/-/posix-character-classes-0.1.1.tgz#01eac0fe3b5af71a2a6c02feabb8c1fef7e00eab"
   integrity sha1-AerA/jta9xoqbAL+q7jB/vfgDqs=
+
+prettier@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.2.1.tgz#795a1a78dd52f073da0cd42b21f9c91381923ff5"
+  integrity sha512-PqyhM2yCjg/oKkFPtTGUojv7gnZAoG80ttl45O6x2Ug/rMJw4wcc9k6aaf2hibP7BGVCCM33gZoGjyvt9mm16Q==
 
 process-nextick-args@~2.0.0:
   version "2.0.1"
