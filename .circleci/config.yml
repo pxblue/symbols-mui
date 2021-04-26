@@ -1,7 +1,7 @@
 version: 2
 jobs:
   build:
-    docker: 
+    docker:
       - image: circleci/node:12.6-browsers
     steps:
       - checkout
@@ -15,3 +15,33 @@ jobs:
       - run:
           name: Verify MUI Artifacts
           command: yarn test
+
+  publish:
+    docker:
+      - image: circleci/node:12.6-browsers
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
+      - run:
+          name: Authenticate with registry
+          command:  |
+            echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
+            echo "//registry.yarnpkg.com/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+      - run:
+          name: Publish @pxblue/symbols-mui
+          command: yarn publish:package
+
+workflows:
+  version: 2
+  colors:
+    jobs:
+      - build
+      - publish:
+          requires:
+            - build
+          filters:
+            branches:
+              only:
+                - master
+                - dev

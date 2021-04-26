@@ -20,7 +20,8 @@
     "start:showcase": "yarn install:dependencies && yarn build && yarn link:components && cd demos/showcase && yarn start",
     "start:storybook": "echo 'No storybook demo yet'",
     "start": "yarn start:showcase",
-    "test": "./scripts/buildTest.sh"
+    "test": "./scripts/buildTest.sh",
+    "publish:package": "cd symbols && set npm_config_yes=true && npx -p @pxblue/publish pxb-publish"
   },
   "bugs": {
     "url": "https://github.com/pxblue/symbols-mui/issues"
