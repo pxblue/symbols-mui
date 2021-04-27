@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:12.6-browsers
+      - image: circleci/node:12.9.1-browsers
     steps:
       - checkout
       - run: 
@@ -15,6 +15,10 @@ jobs:
       - run:
           name: Verify MUI Artifacts
           command: yarn test
+      - persist_to_workspace:
+          root: .
+          paths:
+            - symbols
 
   publish:
     docker:
