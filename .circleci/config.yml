@@ -22,29 +22,23 @@ jobs:
 
   publish:
     docker:
-      - image: circleci/node:12.9.1-browsers
+      - image: circleci/node:12.6-browsers
     steps:
       - checkout
       - attach_workspace:
           at: .
       - run:
           name: Authenticate with registry
-          command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
+          command:  |
+            echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
+            echo "//registry.yarnpkg.com/:_authToken=$NPM_TOKEN" >> ~/.npmrc
       - run:
           name: Publish @pxblue/symbols-mui
-          command:  |
-            MASTER_VERSION=`node -p "require('./package.json').version"`
-            NPM_LATEST_VERSION=`npm show @pxblue/symbols-mui version`
-            if ! [ $MASTER_VERSION == $NPM_LATEST_VERSION ];
-            then
-                npm publish
-            else
-                echo "Latest version is already published."
-            fi
+          command: yarn publish:package
 
 workflows:
   version: 2
-  symbols-mui:
+  colors:
     jobs:
       - build
       - publish:
@@ -54,3 +48,4 @@ workflows:
             branches:
               only:
                 - master
+                - dev
